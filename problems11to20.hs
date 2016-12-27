@@ -48,3 +48,6 @@ rotate xs n = reverse $ reverse ys ++ reverse zs
           len = length xs
 
 -- problem 20
+removeAt :: [a] -> Int -> (a, [a])
+removeAt x n = ((head rotated), rotate (tail rotated) (-(n-1)))
+    where rotated = rotate x (n-1)
